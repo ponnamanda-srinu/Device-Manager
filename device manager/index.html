@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Colorful Modern Order Process Flowchart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f172a;            /* slate-900 */
+      --muted:#94a3b8;         /* slate-400 */
+      --card:#0b1229;          /* slightly darker card */
+      --ring: 0 10px 30px rgba(0,0,0,.35);
+      /* step gradients */
+      --c1: linear-gradient(135deg,#06b6d4,#3b82f6);   /* cyan→blue */
+      --c2: linear-gradient(135deg,#10b981,#22c55e);   /* teal→green */
+      --c3: linear-gradient(135deg,#f59e0b,#ef4444);   /* amber→red */
+      --c4: linear-gradient(135deg,#a855f7,#6366f1);   /* purple→indigo */
+      --c5: linear-gradient(135deg,#ec4899,#f43f5e);   /* pink→rose */
+      --c6: linear-gradient(135deg,#14b8a6,#06b6d4);   /* teal→cyan */
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:radial-gradient(1200px 600px at 70% -10%, #172554 0%, transparent 60%) var(--bg);
+      color:#e5e7eb; font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;
+    }
+
+    .wrap{max-width:980px; margin-inline:auto; padding:28px 20px 64px;}
+
+    header{ text-align:center; margin-bottom:32px; }
+    header h1{ font-size:clamp(24px,4vw,40px); margin:0 0 8px; letter-spacing:0.2px; }
+    header p{ margin:0; color:var(--muted) }
+
+    .flowchart{ display:flex; flex-direction:column; align-items:center; gap:16px; position:relative; }
+
+    /* connector line down the middle */
+    .flowchart::before{
+      content:""; position:absolute; top:0; bottom:0; left:50%; width:3px; transform:translateX(-50%);
+      background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+      border-radius:2px;
+    }
+
+    .node{ position:relative; display:grid; grid-template-columns:auto 1fr; gap:14px 16px; align-items:center;
+      width:min(760px, 100%); padding:20px 22px; border-radius:18px; color:white; box-shadow:var(--ring);
+      backdrop-filter:saturate(140%);
+    }
+    .node h3{margin:0; font-size:clamp(16px,2.6vw,22px); line-height:1.2}
+    .node p{margin:0; color:#f1f5f9; opacity:.9; font-size:clamp(13px,2.2vw,16px)}
+
+    .icon{ width:44px; height:44px; border-radius:12px; display:grid; place-items:center; font-size:22px;
+      background:rgba(255,255,255,.14); box-shadow: inset 0 0 0 1px rgba(255,255,255,.15);
+    }
+
+    .badge{ position:absolute; left:50%; top:-12px; transform:translate(-50%,-50%); font-size:12px; letter-spacing:.6px;
+      background:#020617; color:#cbd5e1; padding:4px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.08);
+    }
+
+    /* arrows between nodes */
+    .arrow{ width:18px; height:60px; display:grid; place-items:center; }
+    .arrow svg{ width:18px; height:60px; opacity:.65 }
+
+    /* color themes per step */
+    .step-1{ background:var(--c1) }
+    .step-2{ background:var(--c2) }
+    .step-3{ background:var(--c3) }
+    .step-4{ background:var(--c4) }
+    .step-5{ background:var(--c5) }
+    .step-6{ background:var(--c6) }
+
+    /* layout nudges */
+    .node{ border:1px solid rgba(255,255,255,.16) }
+
+    footer{ margin-top:26px; text-align:center; color:var(--muted); font-size:12px }
+    footer a{ color:#93c5fd; text-decoration:none }
+
+    /* Print-friendly */
+    @media print{
+      body{ background:#fff; color:#111 }
+      .flowchart::before{ background:#e5e7eb }
+      .node{ -webkit-print-color-adjust:exact; print-color-adjust:exact; box-shadow:none }
+      footer{ display:none }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>    
+      <h1> <div style="background-color:#FF0000;">Device Mangement Process - red Status</div></h1>
+      
+     <h2> <p><div style="background-color: #FFC0CB;">Device Management - pink status </p></h2>
+    </header>
+
+    <section class="flowchart" aria-label="Order process flowchart">
+
+      <div class="node step-1" role="group" aria-label="Step 1: Order Received">
+        <span class="badge">STEP 1</span>
+       
+        <div>
+          <h3>Device Inventory Creating</h3>
+          <p>->Enter the Device serial number <br> ->SMDM Pending to Stock</p></div>.</p>
+          <span class="badge">STEP 1</span>
+          
+
+        </div>
+      </div>
+
+      <div class="arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 72" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <path d="M12 0v56" stroke="white" stroke-opacity="0.55" stroke-width="2"/>
+          <path d="M6 56l6 12 6-12" fill="white" fill-opacity="0.55"/>
+        </svg>
+      </div>
+
+      <div class="node step-2" role="group" aria-label="Step 2: Payment Authorized">
+        <span class="badge">STEP 2</span>
+       
+        <div>
+          <h3>SIM Inventory Creating</h3>
+          <p>->SIM Serial Number Creating<br>->SIM Status Register</p>
+        </div>
+      </div>
+
+      <div class="arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 72" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <path d="M12 0v56" stroke="white" stroke-opacity="0.55" stroke-width="2"/>
+          <path d="M6 56l6 12 6-12" fill="white" fill-opacity="0.55"/>
+        </svg>
+      </div>
+
+      <div class="node step-3" role="group" aria-label="Step 3: Order Processing">
+        <span class="badge">STEP 3</span>
+       
+        <div>
+          <h3>Panchayat Device</h3>
+          <p>->Inastall Admin App<br>->permissions<br>->Devices → Assign Panchayat Secretary<br>->Property Inspections Data→ Generate .</p>
+        </div>
+      </div>
+
+<div class="arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 72" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <path d="M12 0v56" stroke="white" stroke-opacity="0.55" stroke-width="2"/>
+          <path d="M6 56l6 12 6-12" fill="white" fill-opacity="0.55"/>
+        </svg>
+      </div>
+
+      <div class="node step-4" role="group" aria-label="Step 2: Payment Authorized">
+        <span class="badge">STEP 4</span>
+        
+        
+        <div>
+          <h3>DEvice incident Status</h3>
+          <p>->open </p>
+        </div>
+      </div>
+
+      <div class="arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 72" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <path d="M12 0v56" stroke="white" stroke-opacity="0.55" stroke-width="2"/>
+          <path d="M6 56l6 12 6-12" fill="white" fill-opacity="0.55"/>
+        </svg>
+      </div>
+
+      <div class="node step-4" role="group" aria-label="Step 4: Packaging">
+        <span class="badge">STEP 5</span>
+         
+        <div>
+          <h3>Device Insident</h3>
+          <p>->Inprogress<br>->close<br>->otp</p>
+        </div>
+      </div>
+
+      <div class="arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 72" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <path d="M12 0v56" stroke="white" stroke-opacity="0.55" stroke-width="2"/>
+          <path d="M6 56l6 12 6-12" fill="white" fill-opacity=" 
