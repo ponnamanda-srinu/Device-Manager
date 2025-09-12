@@ -33,7 +33,7 @@
     header h1{ font-size:clamp(24px,4vw,40px); margin:0 0 8px; letter-spacing:0.2px; }
     header p{ margin:0; color:var(--muted) }
 
-    .flowchart{ display:flex; flex-direction:column; align-items:center; gap:16px; position:relative; }
+    .flowchart{ display:contents; align-items:center; gap:16px; position:relative; }
 
     /* connector line down the middle */
     .flowchart::before{
@@ -99,12 +99,13 @@
        
         <div>
           <h3>Device Inventory Creating</h3>
-          <p>->Enter the Device serial number <br> ->SMDM Pending to Stock</p></div>.</p>
+          <img src="/home/srinivasp/Downloads/pos.jpeg " style="display:flex; margin-left: 400px;">
+          <p style= "position: relative;">->Enter the Device serial number OR Bar Code ScanningS <br> ->SMDM Pending to Stock</p></div>.</p>
           <span class="badge">STEP 1</span>
           
 
         </div>
-         <img src="/home/srinivasp/Downloads/pos.jpeg " class="pos-inline">
+         
       </div>
 
 
@@ -121,7 +122,7 @@
 
   .pos-inline {
     width: 100%;
-    max-width: 240px;
+    max-width: 200px;
     display: block;
     margin-left: auto;
     filter: drop-shadow(0 6px 14px rgba(0,0,0,0.35));
